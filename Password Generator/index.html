@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel='stylesheet' href="assets/css/style.css">
+</head>
+
+<body>
+    <p><h1><center>The Password Generator</center></h1></p>
+    <div class="custom-container px-0">
+        <div class="generatePasswordSection">
+            <form id="passwordForm">
+                <!-- input form -->
+                <div class="input-group">
+                    <input id="length" type="number" min="5" max="128" value="8">
+                    <input id="password" type="password" class="form-control" placeholder="generate password"
+                        aria-label="Password field">
+                    <!-- regenerate password -->
+                    <button id="generate" type="button">
+                        <ion-icon name="repeat-outline" aria-label="Regenerate password">Generate
+                            Password</ion-icon>
+                    </button>
+                    <!-- toggles visibility of the generated password -->
+                    <button id="reveal" type="button" onclick="revealPassword()">
+                        <ion-icon name="eye-outline" aria-label="Show password">Reveal Password</ion-icon>
+                    </button>
+                </div>
+                <div id="error"></div>
+            </form>
+        </div>
+
+        <div class="row no-padding-row">
+            <!--Pick the length Range-->
+            <div class="col" id="arrow-down">
+                <label for="customRange2" class="form-label" label style="font-size: 20px;">Password
+                    Length</label>
+                <input type="range" class="form-range" min="5" max="128" id="customRange2">
+                <p id="strength"></p>
+            </div>
+
+            <!-- Radio Boxes -->
+            <div class="radioCol">
+                <label for="customRange2" class="form-label" label style="font-size: 20px;">Type of
+                    Password</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="passwordType" id="fruit-salad"
+                        value="fruit" checked>
+                    <label class="form-check-label" for="fruit-salad">
+                        Fruit Salad
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="passwordType" id="all-characters"
+                        value="all">
+                    <label class="form-check-label" for="all-characters">
+                        All Characters
+                    </label>
+                </div>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="checkCol">
+                <label for="customRange2" class="form-label" label style="font-size: 20px;">Character
+                    Selection</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkboxUppercase">
+                    <label class="form-check-label" for="checkboxUppercase">
+                        Uppercase
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkboxLowercase">
+                    <label class="form-check-label" for="checkboxLowercase">
+                        Lowercase
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkboxNumbers">
+                    <label class="form-check-label" for="checkboxNumbers">
+                        Numbers
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkboxSymbols">
+                    <label class="form-check-label" for="checkboxSymbols">
+                        Symbols
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="./assets/js/script1.js"></script>
+</body>
+</html>
